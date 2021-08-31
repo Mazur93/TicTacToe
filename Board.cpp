@@ -55,3 +55,13 @@ bool Board::hasWinner() {
     return false;
 }
 
+void Board::putAtPosition(int y, int x, std::string s) {
+    _board[y][x] = s;
+    numberOfTurns++;
+}
+
+bool Board::gameIsOver() {
+    return numberOfTurns >= 9;
+}
+
+
